@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ServerSide:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ServerSide_jar</output-path>
+    <root id="archive" name="ServerSide.jar">
+      <element id="module-output" name="ServerSide" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Files/ojdbc6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.9/commons-codec-1.9.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
