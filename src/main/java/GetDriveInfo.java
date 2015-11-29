@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
  * Created by Владислав on 08.11.2015.
  */
 public class GetDriveInfo {
-    static String getSerialNumber(){
+    public static String getSerialNumber(){
         String command = "cmd.exe /c wmic diskdrive get SerialNumber";
         Process process;
         BufferedReader inputStream;

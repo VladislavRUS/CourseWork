@@ -11,6 +11,7 @@
             <option name="jarEntries">
               <list>
                 <option value="E:\Java\Projects\ServerSide\out\production\ServerSide" />
+                <option value="E:\Java\Projects\ServerSide\target\classes" />
               </list>
             </option>
           </JarConfig>

@@ -1,3 +1,4 @@
+import org.apache.commons.codec.digest.DigestUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -29,7 +30,7 @@ public class XMLCreator {
         document.appendChild(rootElement);
 
         Element password = document.createElement("password");
-        password.appendChild(document.createTextNode(submitted));
+        password.appendChild(document.createTextNode((submitted)));
         rootElement.appendChild(password);
 
         TransformerFactory transformerFactory = TransformerFactory.newInstance();

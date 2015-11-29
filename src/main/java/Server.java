@@ -40,8 +40,6 @@ public class Server implements Runnable {
         out.println("_help");
         out.println(" _time");
         out.println("_online" + '\n');
-        //out.println("_files");
-        //out.println("_download <filename>" + '\n');
         out.flush();
     }
 

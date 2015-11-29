@@ -3,8 +3,7 @@
 -libraryjars <java.home>/lib/rt.jar
 -dontwarn
 
--keep public class Starter {
+-keep public class Main {
 	
     public static void main(java.lang.String[]);
 }
-

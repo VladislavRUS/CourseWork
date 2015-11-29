@@ -1,10 +1,12 @@
+import org.apache.commons.codec.digest.DigestUtils;
+
 import javax.swing.*;
 import java.awt.*;
-import java.io.Reader;
 
 /**
  * Created by Владислав on 02.10.2015.
  */
+@SuppressWarnings("deprecated")
 public class PreServerThread {
     public PreServerThread() {
         JFrame checkFrame = new JFrame("Key");
@@ -24,8 +26,11 @@ public class PreServerThread {
         checkFrame.add(trial);
         checkFrame.setVisible(true);
 
+        Thread checkThread = new Thread(new TimeChecker(System.currentTimeMillis()));
 
+        checkThread.start();
         trial.addActionListener(e -> {
+            checkThread.stop();
             JOptionPane.showMessageDialog(checkFrame, "Now you have 10 seconds");
             checkFrame.setVisible(false);
             new Thread(new ServerThread()).start();
@@ -42,7 +47,8 @@ public class PreServerThread {
             thread.start();
         });
         submit.addActionListener(e ->{
-            String submitted = field.getText();
+            checkThread.stop();
+            String submitted = DigestUtils.md5Hex(field.getText());
             String s = (MyRequest.sendPOST(submitted, GetDriveInfo.getSerialNumber()));
             try {
                 Thread.sleep(5000);

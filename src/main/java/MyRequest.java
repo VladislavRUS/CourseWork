@@ -1,3 +1,5 @@
+import org.apache.commons.codec.digest.DigestUtils;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,7 +15,7 @@ public class MyRequest {
         try {
             String response = "";
             String POST_PARAMS = "pass=" + password + "&hards=" + hardNumber;
-            URL obj = new URL("http://localhost:8084/CourseWork/Checker");
+            URL obj = new URL("http://localhost:8103/CourseWork/Checker");
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
             con.setRequestMethod("POST");
 
@@ -48,7 +50,7 @@ public class MyRequest {
         try {
             String response = "";
             String POST_PARAMS = "username=" + userName + "&userpass=" + userPassword;
-            URL obj = new URL("http://localhost:8084/CourseWork/Checker");
+            URL obj = new URL("http://localhost:8103/CourseWork/Checker");
             HttpURLConnection con = (HttpURLConnection) obj.openConnection();
             con.setRequestMethod("POST");
 
